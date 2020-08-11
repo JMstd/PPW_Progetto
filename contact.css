@@ -1,0 +1,56 @@
+
+/* inizio contenuto */
+#contenuto {
+	width: 100%;
+	background-color: white;
+	margin:0;
+	padding:0;
+	}
+#contenuto h3 {
+	margin-top: 0.3%;
+	text-align: center;
+	background-color: #66ff66;
+	}
+/* fine contenuto */
+
+/* tabella */
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+	margin-left: 35%;
+	}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 2px;	
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+/* fine tabella*/
+
+/* contenitori dei vari contatti */
+
+.floating-box {
+    float: left;
+    width: auto;
+    margin: 1em;
+
+}
+
+/* fine contenitori contatti */
+
+/* inizio mappa */
+
+#map {
+	width:80%;
+	height: 350px;
+	margin-left: 10%;
+	margin-right: 10%; 
+	margin-bottom: 5%;
+	}
+
+/* fine mappa */

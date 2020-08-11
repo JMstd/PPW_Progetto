@@ -1,0 +1,30 @@
+
+#contenuto {
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	}
+
+	/* polaroid prima */
+div.polaroid {
+  width: 98%;
+  position : relative;
+  margin: 1%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 1em;
+}
+
+div.polaroid > img {
+	width : 40%;
+}
+
+div.container {
+	position : absolute;
+	width: 55%;
+	top: 2%;
+	right: 1%;
+	text-align: center;
+}
+
+/* fine polaroid */

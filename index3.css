@@ -1,0 +1,111 @@
+
+/* div testa*/
+#testa {
+	position: relative;
+	top: 0.5em;
+	left: 3%;
+	right: 3%;
+	width: 94%;
+/*	align: center; credo non faccia nulla, sopratutto in quanto la sintassi e quella di html non*/
+	background-color: yellow;
+	}
+#galleria {
+	width: 100%;
+	}
+#testa img {
+	width: 100%;
+   /* display: block;
+    margin: auto; li ritengo inutili in questo caso */
+	}
+
+#indietro {
+	background-color: none;
+	height: 100%;
+	opacity: 0.3;
+	float: left;
+	border: none;
+	color: white;
+	text-decoration: none;
+	display: inline-block;
+	transition-duration: 0.4s;
+	position: absolute;
+	top: 0px;
+    left: 0px;
+	}
+	
+#indietro:hover, #avanti:hover {
+	background-color: #555555;
+	color: white;
+	opacity: 0.8;
+	}
+
+#avanti {
+	background-color: none;
+	height: 100%;
+	opacity: 0.3;
+	float: right;
+	border: none;
+	color: white;
+	text-decoration: none;
+	display: inline-block;
+	transition-duration: 0.4s;
+	position: absolute;
+	top: 0px;
+    right: 0px;
+	}
+	
+/*fine testa */
+
+/*inizio fondo */
+
+#fondo {
+    position:relative;    
+    left: 3%;
+    right: 3%;
+    width: 94%;
+    top: 30%;
+    background-color: green;
+    }
+#fondo img {
+    width: 100%;
+    display: block;
+    margin: auto;
+    }
+
+#indietrof {
+    background-color: none;
+    height: 100%;
+    opacity: 0.3;
+    float: left;
+    border: none;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 0.4s;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    }
+
+#avantif:hover,#indietrof:hover {
+    background-color: #555555;
+    color: white;
+    opacity: 0.8;
+    }
+    
+#avantif {
+    background-color: none;
+    height: 100%;
+    opacity: 0.3;
+    float: right;
+    border: none;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 0.4s;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    }    
+
+/*fine fondo */	

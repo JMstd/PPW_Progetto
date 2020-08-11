@@ -1,0 +1,69 @@
+/* inizio parte che gestisce le foto incima della galleria */
+
+div.polaroid {
+  width: 50%;
+  position : relative;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+}
+
+div.container {
+	position : absolute;
+	width: 30%;
+	height: 80%;
+	top: 8%;
+	right: 5%; 
+	text-align: center;
+	padding: 10px 20px;
+
+}
+
+div.polaroid > img {
+	width : 55%;
+	}
+	
+/* fine parte che gestisce le foto incima della galleria */
+
+
+/* content */
+#content {
+    box-sizing: border-box;
+    clear: both;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 2%; 
+	/* lascia spazio all' ombra */
+}
+
+/* progetti */
+
+#projects {
+  width: 30%;
+  position : relative;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+  margin-left: 12%;
+  padding-bottom: 60px;
+  display: inline-block;
+  }
+
+#projects article {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+}
+
+#projects img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+#projects a:link {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
