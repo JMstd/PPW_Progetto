@@ -1,12 +1,10 @@
 const NUMERO_FOTO = 4;
 const RITARDO = 2000;
-var galleria;
-var indiceFoto;
-var automatico;
-var start;
+var galleria = [];
+var indiceFoto = 0;
+var automatico = true;
 var nodoAvanti;
 var nodoIndietro;
-var nodoStartStop;
 var nodoFoto;
 
 function gestoreLoad () {
@@ -14,16 +12,13 @@ function gestoreLoad () {
 		nodoAvanti = document.getElementById("avanti");
 		nodoIndietro = document.getElementById("indietro");
 		nodoFoto = document.getElementById("foto");
-		nodoAvanti.onclick = gestoreClickAvanti;
+		nodoAvanti.onclick = gestoreClickAvanti; //gestoreClick (nodoAvanti.value);
 		nodoIndietro.onclick = gestoreClickIndietro;
-		automatico = false;
-		start = true;
-		galleria = [];
+		// popola galleria con i nomi delle mie foto nella cartella
 		for (var i = 0; i < NUMERO_FOTO; i++) {
-			var numeroFoto = "foto/foto" +i + ".jpg";
-			galleria.push(numeroFoto);
+			var nomeFoto = "foto/foto" +i + ".jpg";
+			galleria.push(nomeFoto);
 			}
-		indiceFoto = 0;
 		cambiaFoto(0);
 		cambiaFotoInAutomatico();
 		} catch (e) {
@@ -35,9 +30,6 @@ window.onload = gestoreLoad;
 // vengono gestiti i click sulle frecce del gestore immagini sulla home 
 function gestoreClickAvanti () {
 	try{
-		if (automatico) {
-			return;
-			}
 		cambiaFoto(+1);
 		} catch (e) {
 			alert("gestoreClickAvanti " + e);
@@ -46,15 +38,12 @@ function gestoreClickAvanti () {
 
 function gestoreClickIndietro () {
 	try {
-		if (automatico) {
-			return;
-			}
 		cambiaFoto(-1);
 		} catch (e) {
 			alert("gestoreClickIndietro " + e);
 			}
 	}
-	
+
 function cambiaFoto (x) {
 	try {
 		indiceFoto += x;
@@ -71,7 +60,7 @@ function cambiaFoto (x) {
 	}
 
 function cambiaFotoInAutomatico () {
-	if (start) {
+	if (automatico) {
 		cambiaFoto(+1);
 		setTimeout(cambiaFotoInAutomatico, RITARDO);
 		}
