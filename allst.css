@@ -15,7 +15,6 @@ a {
     color: #003366;
 }
 
-
 /* header */
 
 header {
@@ -45,10 +44,7 @@ header img {
 	margin: 1% 1% 1% 1%;
 }
 
-
 /* fine header*/
-
-
 
 /* pulsanti menu */
 #menu input {
@@ -71,8 +67,6 @@ header img {
     text-align: center;
     }
 /* pulsanti menu */ 
-
-
 
 /* footer */
 
@@ -100,4 +94,3 @@ footer {
 
 #info a {color: gray}
 /* fine footer */
-
