@@ -1,22 +1,27 @@
 /* inizio parte che gestisce le foto incima della galleria */
 
 div.polaroid {
-  width: 50%;
-  position : relative;
+  width: 35%;
+  /*position : relative;*/
+  margin-left: 12%;
+  display: inline-block;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-bottom: 25px;
+  padding: 0.1em;
 }
 
 div.container {
-	position : absolute;
-	width: 30%;
-	height: 80%;
+/*	position : absolute;
 	top: 8%;
-	right: 5%; 
-	text-align: center;
-	padding: 10px 20px;
+  right: 5%; 
+  	height: 80%;
 
+*/  
+  float: right;
+	width: 40%;
+	text-align: center;
+	padding: 2%;
 }
 
 div.polaroid > img {
@@ -25,16 +30,6 @@ div.polaroid > img {
 	
 /* fine parte che gestisce le foto incima della galleria */
 
-
-/* content */
-#content {
-    box-sizing: border-box;
-    clear: both;
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 2%; 
-	/* lascia spazio all' ombra */
-}
 
 /* progetti */
 
@@ -59,8 +54,6 @@ div.polaroid > img {
     width: 100%;
     height: 100%;
 }
-
-
 
 #projects a:link {
     display: block;

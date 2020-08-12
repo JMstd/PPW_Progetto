@@ -5,10 +5,10 @@
 	padding: 0px;
 	}
 
-	/* polaroid prima */
+/* polaroid prima */
 div.polaroid {
   width: 98%;
-  position : relative;
+/*  position : relative;*/
   margin: 1%;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -20,11 +20,13 @@ div.polaroid > img {
 }
 
 div.container {
-	position : absolute;
+/*	position : absolute;*/
 	width: 55%;
-	top: 2%;
+/*	top: 5%;
 	right: 1%;
+*/
 	text-align: center;
+	float: right;
 }
 	
 /* fine polaroid */

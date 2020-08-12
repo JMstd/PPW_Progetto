@@ -29,7 +29,6 @@ td, th {
 tr:nth-child(even) {
     background-color: #dddddd;
 }
-
 /* fine tabella*/
 
 /* contenitori dei vari contatti */
@@ -47,10 +46,10 @@ tr:nth-child(even) {
 
 #map {
 	width:80%;
-	height: 350px;
+	height: 25em/*350px*/;
 	margin-left: 10%;
 	margin-right: 10%; 
-	margin-bottom: 5%;
+	margin-bottom: 3%;
 	}
 
 /* fine mappa */
