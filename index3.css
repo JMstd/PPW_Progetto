@@ -3,9 +3,8 @@
 #testa {
 	position: relative;
 	top: 0.5em;
-	left: 3%;
-	right: 3%;
-	width: 94%;
+	left: 8%;
+	width: 84%;
 /*	align: center; credo non faccia nulla, sopratutto in quanto la sintassi e quella di html non*/
 	background-color: yellow;
 	}
@@ -13,10 +12,9 @@
 	width: 100%;
 	}
 #testa img {
-	width: 100%;
-   /* display: block;
-    margin: auto; li ritengo inutili in questo caso */
-	}
+    max-width: 90%;
+    margin-left: 5%;
+}
 
 #indietro {
 	background-color: none;
@@ -55,3 +53,31 @@
 	}
 	
 /*fine testa */
+
+/*inizio parte che gestisce le notizie*/
+
+  div.polaroid {
+    width: 30%;
+    margin-left: 2.3%;
+    display: inline-block;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+    padding: 0.1em;
+  }
+  
+  div.container {
+    float: right;
+      width: 40%;
+      text-align: center;
+      padding: 2%;
+  }
+  
+  div.polaroid > img {
+      width : 55%;
+      }
+		
+  #Sottosezione {
+	  margin-left: 3%;
+  }
+/*fine parte che gestisce le notizie*/

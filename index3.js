@@ -1,5 +1,5 @@
-const NUMERO_FOTO = 4;
-const RITARDO = 2000;
+const NUMERO_FOTO = 7;
+const RITARDO = 2700;
 var galleria = [];
 var indiceFoto = 0;
 var automatico = true;
@@ -16,10 +16,10 @@ function gestoreLoad () {
 		nodoIndietro.onclick = gestoreClickIndietro;
 		// popola galleria con i nomi delle mie foto nella cartella
 		for (var i = 0; i < NUMERO_FOTO; i++) {
-			var nomeFoto = "foto/foto" +i + ".jpg";
+			var nomeFoto = "foto/slides/foto" +i + ".jpg";
 			galleria.push(nomeFoto);
 			}
-		cambiaFoto(0);
+		cambiaFoto(-1);
 		cambiaFotoInAutomatico();
 		} catch (e) {
 			alert("gestoreLoad " + e);

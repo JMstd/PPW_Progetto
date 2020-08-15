@@ -1,30 +1,27 @@
-
-#contenuto {
-	width: 100%;
-	margin: 0px;
-	padding: 0px;
+#menu {
+	margin-bottom: 3%;
 	}
-
-	/* polaroid prima */
-div.polaroid {
-  width: 98%;
-  position : relative;
-  margin: 1%;
-  background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin-bottom: 1em;
-}
-
-div.polaroid > img {
-	width : 40%;
-}
-
-div.container {
-	position : absolute;
-	width: 55%;
-	top: 2%;
-	right: 1%;
+  
+  div.polaroid {
+	width: 35%;
+   /* width: 35%;
+	/*position : relative;*/
+	margin-left: 10%;
+	display: inline-block;
+	background-color: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	margin-bottom: 25px;
+	padding: 0.1em;
+  }
+  
+  div.container {
+	float: right;
+	width: 80%;
 	text-align: center;
-}
-
-/* fine polaroid */
+	padding: 2%;
+  }
+  
+  div.polaroid > img {
+	  max-width : 65%;  
+  }
+	  

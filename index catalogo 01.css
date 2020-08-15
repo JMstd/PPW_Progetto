@@ -1,6 +1,5 @@
 /* inizio parte che gestisce le foto incima della galleria */
 
-
 #menu {
   margin-bottom: 3%;
   }
@@ -25,13 +24,13 @@ div.container {
 
 */  
   float: right;
-	width: 40%;
+  width: 40%;
 	text-align: center;
 	padding: 2%;
 }
 
 div.polaroid > img {
-	width : 55%;
-	}
+	max-width : 55%;  
+}
 	
 /* fine parte che gestisce le foto incima della galleria */
