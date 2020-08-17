@@ -1,0 +1,28 @@
+#lato{
+	background-repeat: repeat-y;
+	z-index: -2;
+	position: absolute; 
+
+}
+
+#myCanvas{
+	position: absolute; 
+	z-index: -1;
+	mask-repeat: repeat;
+}
+
+
+<!--
+		<canvas id="myCanvas" width="300" height="300" >
+
+			Your browser does not support the HTML5 canvas tag.</canvas>
+			
+			<script>
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+			ctx.rotate(270 * Math.PI / 360);
+
+            ctx.fillRect(-50, -160, 80, 80);
+			</script>
+-->
+		<img src="foto/logo.jpg" alt="logo" id="lato" />

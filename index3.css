@@ -73,7 +73,7 @@
       padding: 2%;
   }
   
-  div.polaroid > img {
+  div.polaroid > a > img {
       width : 55%;
       }
 		

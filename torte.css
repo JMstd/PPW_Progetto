@@ -16,12 +16,20 @@
   
   div.container {
 	float: right;
-	width: 80%;
+	width: 100%;
 	text-align: center;
 	padding: 2%;
   }
-  
+
   div.polaroid > img {
-	  max-width : 65%;  
+	  max-width : 95%;  
+	  padding: 2.5%;
   }
-	  
+	    
+  h3 {
+	font-size: 1.5em;
+  }
+
+  p {
+    font-size: 1.3em;
+  }
