@@ -45,11 +45,13 @@ tr:nth-child(even) {
 /* inizio mappa */
 
 #map {
-	width:80%;
-	height: 25em/*350px*/;
+	max-width:80%;
 	margin-left: 10%;
 	margin-right: 10%; 
 	margin-bottom: 3%;
 	}
-
+#map > img {
+	max-width: 70%;
+	margin-left: 30%;
+}
 /* fine mappa */
