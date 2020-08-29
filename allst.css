@@ -96,8 +96,8 @@ footer {
     font-size: 0.8em;
 /*    float: left;*/
     display: inline-block;
-    margin-left: 30%;
-    width: 20%;
+    margin-left: 20%;
+    width: 30%;
 }
 
 #info a {color: gray}

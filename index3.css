@@ -74,10 +74,10 @@ a {
     margin-bottom: 25px;
     padding: 0.1em;
   }
+  
   div.polaroid:hover{
 	opacity: 0.8;
 	background-color: #8d8c8c;
-
   } 
 
   div.container {
