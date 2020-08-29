@@ -28,6 +28,7 @@ header {
 }
 header *{
     display: inline-block;
+    text-align: center;
 }
 header h1 {
     font-size: 3.5em;
@@ -43,6 +44,10 @@ header a {
     text-decoration: none;
     margin: 1%;
 
+}
+
+#logo{
+    max-width: 100%;
 }
 
 /* fine header*/
@@ -76,21 +81,23 @@ footer {
     margin-top: 40px;
     padding: 0;
     width: 100%;
-    color: black;
+    color: wheat;
     background-color: #432F10;
 }
 
 #info {
-    min-height: 80px;
+    min-height: 6em;
     width: 90%;
     margin: auto;
-    padding-bottom: 5px;
+    /*padding-bottom: 5px;*/
 }
 
 #info p {
     font-size: 0.8em;
-    float: left;
-    width: 33%;
+/*    float: left;*/
+    display: inline-block;
+    margin-left: 30%;
+    width: 20%;
 }
 
 #info a {color: gray}

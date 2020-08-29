@@ -7,12 +7,14 @@
 	<link rel="stylesheet" href="allst.css" type="text/css" />
 	<link rel="stylesheet" href="contact.css" type="text/css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="allst.js"> </script>
+	<link rel="icon" href="" type="image/gif" sizes="16x16">
 </head>
 
 <body>
 
 	<header>
-		<img src="foto/logo.jpg" alt="logo" />
+		<a href="index3.html" > <img src="foto/logo.png" alt="logo" id="logo" /> </a>
 		<h1>Pasticceria metti le mani in pasta</h1>
 	</header>
 
@@ -78,7 +80,8 @@
 		</table>
 
 	</div>
-	<p> dove siamo:</p>
+
+	<h3 id = "h3_map"> Dove siamo:</h3>
 
 	<div class="floating-box">
 		<i id="tel" type="tel" style="font-size:24px" class="fa">&#xf095;</i>
@@ -104,30 +107,26 @@
 		<i id="mail" style="font-size:24px" class="fa">&#xf0e0;</i>
 		E-mail: <a href="mailto:ambriola@di.unipi.it">ambriola@di.unipi.it</a>
 	</div>
-
+	
 	<div id="map"> 
 		<img src="foto/maps.png" alt="mappa"  />
+
+		<!--width="1920" height="1280"-->
+		<!--<img src="foto/maps.png" border="0" usemap="#map" />-->
+
+		<map name="map">
+		<!-- #$-:Image map file created by GIMP Image Map plug-in -->
+		<!-- #$-:GIMP Image Map plug-in by Maurits Rijk -->
+		<!-- #$-:Please do not edit lines starting with "#$" -->
+		<!-- #$VERSION:2.3 -->
+		<!-- #$AUTHOR:juri -->
+		<area shape="circle" coords="1093,711,70"  nohref="nohref" />
+		</map>
+
 	</div>
 
 	<footer>
-		<div id="info">
-			<p>
-				Vincenzo Ambriola<br />
-				email: <a href="mailto:ambriola@di.unipi.it">ambriola@di.unipi.it</a><br />
-				Ricevimento: Mar ore 15:00<br />
-			</p>
-
-			<p>
-				Maria Simi<br />
-				email: <a href="mailto:simi@di.unipi.it">simi@di.unipi.it</a><br />
-				Ricevimento: Lun ore 15:00, Gio ore 11:00<br />
-			</p>
-
-			<p>
-				Simone Zenzaro<br />
-				email: <a href="mailto:simone.zenzaro@gmail.com">zenzaro@di.unipi.it</a><br />
-			</p>
-		</div>
+		<div id="info"></div>
 	</footer>
 
 </body>

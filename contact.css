@@ -32,26 +32,31 @@ tr:nth-child(even) {
 /* fine tabella*/
 
 /* contenitori dei vari contatti */
+#h3_map{
+	margin-left: 3%;
+}
+
 
 .floating-box {
-    float: left;
-    width: auto;
-    margin: 1em;
-
+	max-width: 100%;
+	display: inline-block;
+	margin: 2%;
+	margin-left: 6%;
 }
 
 /* fine contenitori contatti */
 
 /* inizio mappa */
 
+
 #map {
-	max-width:80%;
-	margin-left: 10%;
-	margin-right: 10%; 
-	margin-bottom: 3%;
+	max-width:70%;
+	margin: 3%;
 	}
 #map > img {
-	max-width: 70%;
-	margin-left: 30%;
+	margin-left: 23%;
+	border-style: solid;
+	border-width: thin;
+
 }
 /* fine mappa */
