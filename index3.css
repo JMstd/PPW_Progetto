@@ -83,7 +83,8 @@ a {
   div.container {
     float: right;
       width: 40%;
-      text-align: center;
+	  text-align: center;
+	  line-break: anywhere;
       padding: 2%;
   }
   

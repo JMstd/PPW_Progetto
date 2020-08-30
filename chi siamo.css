@@ -23,6 +23,7 @@ div.container {
 
 	width: 55%;
 	text-align: center;
+	line-break: anywhere;
 	float: right;
 }
 	
