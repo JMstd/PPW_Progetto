@@ -96,3 +96,34 @@ a {
 	  margin-left: 3%;
   }
 /*fine parte che gestisce le notizie*/
+
+
+@media screen and (max-width: 600px) {
+	#testa {
+		width: 100%;
+		left: 0%;
+	}	
+	
+	#testa a {
+		max-width: 98%;
+		margin-left: 1%;
+	
+	}
+	
+	#indietro, #avanti {
+	margin: 0%;
+	height: 92%;
+	}
+
+	div.polaroid {
+		width: 80%;
+		margin-left: 10%;
+	}
+}
+
+
+}
+@media screen and (max-width: 860px) {
+   
+}
+@media screen and (min-width: 1200px) {}

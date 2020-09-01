@@ -84,8 +84,12 @@ hr:before { /* Not really supposed to work, but does */
 /* fine contenitori contatti */
 
 /* inizio mappa */
+#mappa {
+	max-width: 100%;
+}
 
-#map {
+#map {  position: relative;
+
 	max-width:70%;
 	margin: 3%;
 	}
