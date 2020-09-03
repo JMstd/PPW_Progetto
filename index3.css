@@ -21,7 +21,6 @@ a {
 }
 
 #indietro {
-	background-color: none;
 	height: 97.5%;
 	margin-left: 5%;
 	font-size: 400%;
@@ -45,7 +44,6 @@ a {
 	}
 
 #avanti {
-	background-color: none;
 	height: 97.5%;
 	margin-right: 5%;
 	font-size: 400%;
@@ -121,8 +119,6 @@ a {
 	}
 }
 
-
-}
 @media screen and (max-width: 860px) {
    
 }

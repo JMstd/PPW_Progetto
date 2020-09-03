@@ -52,24 +52,21 @@ header a {
 
 /* fine header*/
 
-/* pulsanti menu */
-#menu input {
+/* pulsanti menu  prima c'era input*/
+#menu a {
+    text-decoration: none;
     background-color: #432F10;
     border: none;
     color: white;
     padding: 2% 4%;
-    text-decoration: none;
     margin: 0.1em 0.1em;
     cursor: pointer;
     font-size: 1.1em;   
     }
-    
-#menu a {
-    text-decoration: none;
-    }
 
 #menu {
-    margin-top: 0.5%;
+    margin: 2.5%;
+    margin-top: 2.8%;
     text-align: center;
     }
 /* pulsanti menu */ 
@@ -139,7 +136,7 @@ footer {
         float: right;
     }
 
-    #menu a input {
+    #menu a { /*qui c'era input*/
        /* display: block;*/
         width: 40%;
         margin-left: 50%;
