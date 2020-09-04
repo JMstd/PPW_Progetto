@@ -1,5 +1,5 @@
-const LOGO_ICON = "foto/logo.png";
-const LOGO_HEADER = "foto/logo.png";
+const LOGO_ICON = "img/logo.png";
+const LOGO_HEADER = "img/logo.png";
 
 var nodoLogo_icon;
 var nodoLogo_header;
@@ -16,12 +16,12 @@ function gestoreIcone() {
             for (var i = 0; i < links.length; i++) {
                 if (document.getElementsByTagName("link")[i].getAttribute("rel") == "icon") {
                     // j.push(document.getElementsByTagName("link")[i])
-                    document.getElementsByTagName("link")[i].setAttribute("href", "foto/logo.png");
+                    document.getElementsByTagName("link")[i].setAttribute("href", "img/logo.png");
                 }
             }
         }
 
-        var logoh = document.getElementById("logo").setAttribute("src", "foto/logo.png")
+        var logoh = document.getElementById("logo").setAttribute("src", "img/logo.png")
         //***************************************************************************************************** */
         gestoreFooter();
 

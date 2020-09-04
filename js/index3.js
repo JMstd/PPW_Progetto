@@ -22,7 +22,7 @@ function gestoreLoad () {
 
 		// popola galleria con i nomi delle mie foto nella cartella
 		for (var i = 0; i < NUMERO_FOTO; i++) {
-			var nomeFoto = "foto/slides/foto" +i + ".jpg";
+			var nomeFoto = "img/slides/foto" +i + ".jpg";
 			galleria.push(nomeFoto);
 			}
 		cambiaFoto(-1);
@@ -42,12 +42,12 @@ function gestoreIcone () {
             for (var i=0; i< links.length; i++){
                 if (document.getElementsByTagName("link")[i].getAttribute("rel") == "icon"){
                    // j.push(document.getElementsByTagName("link")[i])
-                   document.getElementsByTagName("link")[i].setAttribute("href", "foto/logo.png");
+                   document.getElementsByTagName("link")[i].setAttribute("href", "img/logo.png");
                 }
             }
         }
 
-        var logoh = document.getElementById("logo").setAttribute("src", "foto/logo.png")
+        var logoh = document.getElementById("logo").setAttribute("src", "img/logo.png")
         gestoreFooter();
 
 		} catch (e) {
