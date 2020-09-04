@@ -12,6 +12,9 @@ var nodoLinkFoto;
 function gestoreLoad () {
 	try{
 		gestoreIcone ();
+		nodoIcona_home = document.getElementById("Icona_home");
+        nodoIcona_home.onclick = gestoreIcona_home;
+        //***************************************************************************************************** */
 		nodoAvanti = document.getElementById("avanti");
 		nodoIndietro = document.getElementById("indietro");
 		nodoFoto = document.getElementById("foto");
@@ -34,6 +37,25 @@ function gestoreLoad () {
 window.onload = gestoreLoad;
 
 //********	CODICE DI ALLST.JS**************************************rivedere se cambio altre cose dopo***************************************************************** */
+
+function gestoreIcona_home() {
+
+    var controllo = "";
+
+    var anchor = document.getElementById("menu").getElementsByTagName("a");
+
+    if (anchor[0].style.display == "block") {
+        controllo = "none";
+    } else {
+        controllo = "block";
+    }
+
+    for (var i = 0; i < anchor.length; i++) {
+        anchor[i].style.display = controllo;
+    }
+
+}
+
 function gestoreIcone () {
 	try{
         var links = document.getElementsByTagName("link");
@@ -53,7 +75,7 @@ function gestoreIcone () {
 		} catch (e) {
 			alert("gestoreLoad " + e);
 			}
-    }
+	}
 
     function gestoreFooter(){
         var info = document.getElementById("info");

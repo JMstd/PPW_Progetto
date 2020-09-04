@@ -106,7 +106,7 @@ footer {
     display: none;
 /*    visibility: hidden;*/ 
 }
-
+/*************************************************************************************************************/
 @media screen and (max-width: 600px) {
     header h1 {
         font-size: 2.5em;
@@ -135,9 +135,14 @@ footer {
         width: 20%;
         float: right;
     }
+    
+    #links_menu{
+        margin-top: 22%;
+        margin-right: 8%;
+    }
 
     #menu a { /*qui c'era input*/
-       /* display: block;*/
+        display: block;
         width: 40%;
         margin-left: 50%;
     }
@@ -147,12 +152,17 @@ footer {
     }
 
     #Icona_home:hover, #Icona_home:active {
-        width: 25%;
+        width: 22%;
     /*    transition-duration: 0.1s;    */
     }
 
     .polaroid {
         margin-top: 3%;
+    }
+
+/***********************************mi gestisce la tabella con gli orari in contatti *********************/
+    #tabella{
+    margin-left: 9%;
     }
 
 }
