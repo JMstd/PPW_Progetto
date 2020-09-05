@@ -1,10 +1,4 @@
 
-#contenuto {
-	width: 100%;
-	margin: 0px;
-	padding: 0px;
-	}
-
 /* polaroid prima */
 div.polaroid {
   width: 98%;
@@ -31,3 +25,11 @@ div.container {
 	font-size: 1em;
 } 
 /* fine polaroid */
+
+@media screen and (min-width: 601px) and (max-width: 860px) {
+div.polaroid{
+  width: 90%;
+  margin-left: 5%;
+}
+
+}

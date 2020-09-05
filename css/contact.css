@@ -96,9 +96,27 @@ hr:before { /* Not really supposed to work, but does */
 
 #map > img {
 	max-width: 100%;
-	margin-left: 23%;
+	margin-left: 21%;
 	border-style: solid;
 	border-width: thin;
 
 }
 /* fine mappa */
+
+
+@media screen and (max-width: 600px) {
+/***********************************mi gestisce la tabella con gli orari in contatti *********************/
+#tabella{
+    margin-left: 9%;
+    }
+
+    #map {
+        max-width:100%;
+    }
+    
+    #map > img {
+        max-width: 100%;
+        margin: 0%;
+    
+    }
+}

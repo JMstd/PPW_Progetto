@@ -82,7 +82,6 @@ a {
     float: right;
       width: 40%;
 	  text-align: center;
-	  line-break: anywhere;
       padding: 2%;
   }
   
@@ -119,7 +118,16 @@ a {
 	}
 }
 
-@media screen and (max-width: 860px) {
-   
+@media screen and (min-width: 601px) and (max-width: 860px) {
+	#testa {
+		width: 100%;
+		left: 0%;
+        margin-top: 4%;
+	}
+
+	div.polaroid {
+		width: 40%;
+		margin-left: 5%;
+	}
 }
 @media screen and (min-width: 1200px) {}
