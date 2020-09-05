@@ -126,7 +126,11 @@ footer {
     header a {
         width: 30%;
         margin-left: 35%;
-        z-index: 1;
+    }
+
+    header{
+        z-index: 2;
+
     }
 
     #menu{
@@ -194,4 +198,5 @@ footer {
     }
 
 }
+
 @media screen and (min-width: 1200px) {}

@@ -17,14 +17,30 @@ div.container {
 
 	width: 55%;
 	text-align: center;
-	line-break: anywhere;
 	float: right;
+  margin-right: 1%;
 }
 	
 .container > p {
 	font-size: 1em;
 } 
 /* fine polaroid */
+
+@media screen and (max-width: 860px) {
+
+  div.container {
+
+    width: 94%;
+    margin: 2%;
+    text-align: center;
+  }
+
+  div.polaroid > img {
+    width: 98%;
+    margin: 1%;
+  }
+
+}
 
 @media screen and (min-width: 601px) and (max-width: 860px) {
 div.polaroid{
