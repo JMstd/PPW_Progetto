@@ -24,7 +24,7 @@ function gestoreIcone() {
         var logoh = document.getElementById("logo").setAttribute("src", "img/logo.png")
         //***************************************************************************************************** */
         gestoreFooter();
-
+        gestoreColoreMenu()
     } catch (e) {
         alert("gestoreLoad " + e);
     }
@@ -67,6 +67,24 @@ function gestoreIcona_home() {
     for (var i = 0; i < anchor.length; i++) {
         anchor[i].style.display = controllo;
     }
+
+}
+
+function gestoreColoreMenu() {
+
+    var href_corrente = window.location.href;  
+
+    var res = href_corrente.split("/");
+    
+    menu = document.getElementById("links_menu");
+
+    links = menu.getElementsByTagName("a");
+
+    for (var i = 0; i < links.length; i++){
+        if (res[res.length-1] == links[i].getAttribute("href")){
+            links[i].style.backgroundColor = "#994d00";
+        }
+    } 
 
 }
 
