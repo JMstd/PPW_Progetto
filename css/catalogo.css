@@ -32,5 +32,14 @@ div.container {
 div.polaroid > img {
 	max-width : 55%;  
 }
-	
+  
 /* fine parte che gestisce le foto incima della galleria */
+
+
+@media screen and (max-width: 600px) {
+
+  div.polaroid{
+    width: 76%;
+  }
+
+}
