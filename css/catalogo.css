@@ -6,8 +6,6 @@
 
 div.polaroid {
   width: 36%;
- /* width: 35%;
-  /*position : relative;*/
   margin-left: 12%;
   display: inline-block;
   background-color: white;
@@ -17,12 +15,6 @@ div.polaroid {
 }
 
 div.container {
-/*	position : absolute;
-	top: 8%;
-  right: 5%; 
-  	height: 80%;
-
-*/  
   float: right;
   width: 40%;
 	text-align: center;
@@ -34,7 +26,6 @@ div.polaroid > img {
 }
   
 /* fine parte che gestisce le foto incima della galleria */
-
 
 @media screen and (max-width: 600px) {
 

@@ -44,7 +44,7 @@ hr {
 	width: 90%;
 }
 
-/************** questa parte è stata copiatadal seguente sito --> https://css-tricks.com/examples/hrs/ ************/
+/************** questa parte è stata copiata dal seguente sito --> https://css-tricks.com/examples/hrs/ ************/
 /***************** Le piccole modifiche fatte da me sono praticamente nulle ******************/
 /* Flaired edges, by Tomas Theunissen */
 
@@ -103,8 +103,8 @@ hr:before { /* Not really supposed to work, but does */
 }
 /* fine mappa */
 
-
 @media screen and (max-width: 600px) {
+
 /***********************************mi gestisce la tabella con gli orari in contatti *********************/
 #tabella{
     margin-left: 9%;

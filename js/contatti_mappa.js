@@ -31,10 +31,10 @@ function gestoreLoad() {
 
         var logoh = document.getElementById("logo").setAttribute("src", "img/logo.png")
         //***************************************************************************************************** */
-		gestoreFooter();
-		gestoreColoreMenu();
-//******************************************* fine parte relativa a allst.js********** */
-		gestoreMappa();
+        gestoreFooter();
+        gestoreColoreMenu();
+        //******************************************* fine parte relativa a allst.js********** */
+        gestoreMappa();
 
     } catch (e) {
         alert("gestoreLoad " + e);
@@ -63,19 +63,19 @@ function gestoreIcona_home() {
 
 function gestoreColoreMenu() {
 
-    var href_corrente = window.location.href;  
+    var href_corrente = window.location.href;
 
     var res = href_corrente.split("/");
-    
+
     menu = document.getElementById("links_menu");
 
     links = menu.getElementsByTagName("a");
 
-    for (var i = 0; i < links.length; i++){
-        if (res[res.length-1] == links[i].getAttribute("href")){
+    for (var i = 0; i < links.length; i++) {
+        if (res[res.length - 1] == links[i].getAttribute("href")) {
             links[i].style.backgroundColor = "#994d00";
         }
-    } 
+    }
 
 }
 
@@ -102,64 +102,64 @@ function gestoreFooter() {
 }
 
 function gestoreMappa() {
-	try {
-		nodiArea = document.getElementsByTagName("area");
-		nodoTuttomondo = document.getElementById("mappa");
-		nodoMessaggio = document.getElementById("messaggio");
-		coordinateAree = [];
-		for (var i = 0; i < nodiArea.length; i++) {
-			var nodoArea = nodiArea[i];
-			nodoArea.onclick = gestoreClickArea;
-			nodoArea.onmouseover = gestoreCursore;
-			coordinateAree[i] = nodoArea.coords.split(',');
-		}
-		dimensioneFoto = LARGHEZZZA_FOTO;
-		var nodoTesto = document.createTextNode("");
-		nodoMessaggio.appendChild(nodoTesto);
-		window.onresize = gestoreResize;
-		gestoreResize();
+    try {
+        nodiArea = document.getElementsByTagName("area");
+        nodoTuttomondo = document.getElementById("mappa");
+        nodoMessaggio = document.getElementById("messaggio");
+        coordinateAree = [];
+        for (var i = 0; i < nodiArea.length; i++) {
+            var nodoArea = nodiArea[i];
+            nodoArea.onclick = gestoreClickArea;
+            nodoArea.onmouseover = gestoreCursore;
+            coordinateAree[i] = nodoArea.coords.split(',');
+        }
+        dimensioneFoto = LARGHEZZZA_FOTO;
+        var nodoTesto = document.createTextNode("");
+        nodoMessaggio.appendChild(nodoTesto);
+        window.onresize = gestoreResize;
+        gestoreResize();
 
-	} catch (e) {
-		alert("gestoreLoad " + e);
-	}
+    } catch (e) {
+        alert("gestoreLoad " + e);
+    }
 }
 
 function gestoreClickArea() {
-	try {
-		scriviMessaggio(nodoMessaggio, simboliNascosti[this.id]);
-	} catch (e) {
-		alert("gestoreClickArea " + e);
-	}
+    try {
+        scriviMessaggio(nodoMessaggio, simboliNascosti[this.id]);
+    } catch (e) {
+        alert("gestoreClickArea " + e);
+    }
 }
 
 var simboliNascosti = [
-	"Polo Fibonacci ",
+    "Polo Fibonacci ",
 ];
 
 function scriviMessaggio(nodo, messaggio) {
-	var nodoTesto = document.createTextNode(messaggio);
-	nodo.replaceChild(nodoTesto, nodo.firstChild);
+    var nodoTesto = document.createTextNode(messaggio);
+    nodo.replaceChild(nodoTesto, nodo.firstChild);
 }
 
 function gestoreResize() {
-	try {
-		var attualeDimensioneFoto = nodoTuttomondo.width;
-		var ratio = attualeDimensioneFoto / dimensioneFoto;
-		for (var i = 0; i < nodiArea.length; i++) {
-			for (var j = 0; j < coordinateAree[i].length; j++) {
-				coordinateAree[i][j] *= ratio;
-			}
-			nodiArea[i].coords = coordinateAree[i].join(',');
-		}
-		dimensioneFoto = attualeDimensioneFoto;
-	} catch (e) {
-		alert("gestoreResize " + e);
-	}
+    try {
+        var attualeDimensioneFoto = nodoTuttomondo.width;
+        var ratio = attualeDimensioneFoto / dimensioneFoto;
+        for (var i = 0; i < nodiArea.length; i++) {
+            for (var j = 0; j < coordinateAree[i].length; j++) {
+                coordinateAree[i][j] *= ratio;
+            }
+            nodiArea[i].coords = coordinateAree[i].join(',');
+        }
+        dimensioneFoto = attualeDimensioneFoto;
+    } catch (e) {
+        alert("gestoreResize " + e);
+    }
 }
 function gestoreCursore() {
-	try {
-		this.style.cursor = "pointer";
-	} catch (e) {
-		alert("gestoreCursore " + e);
-	}
+    try {
+        this.style.cursor = "pointer";
+    } catch (e) {
+        alert("gestoreCursore " + e);
+    }
 }
