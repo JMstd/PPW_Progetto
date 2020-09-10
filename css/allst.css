@@ -1,4 +1,5 @@
 /* initial general set */
+
 body {
     padding: 0; margin: 0;
     font-family: Arial, Verdana, Geneva, sans-serif;
@@ -16,7 +17,7 @@ a {
     color: #003366;
 }
 
-/* header */
+/* inizio header */
 
 header {
     font-family: "Times New Roman", Times, serif;
@@ -26,10 +27,12 @@ header {
     background-color: #EB9B3F;
     box-shadow: 0px 1px 7px #444444;
 }
+
 header *{
     display: inline-block;
     text-align: center;
 }
+
 header h1 {
     font-size: 3.5em;
     font-weight: normal;
@@ -42,16 +45,16 @@ header h1 {
 header a {  
     text-decoration: none;
     margin: 1%;
-
 }
 
 #logo{
     max-width: 100%;
 }
 
-/* fine header*/
+/* fine header */
 
-/* pulsanti menu*/
+/* inizio pulsanti menu */
+
 #menu a {
     text-decoration: none;
     background-color: #432F10;
@@ -60,18 +63,19 @@ header a {
     padding: 2% 4%;
     margin: 0.1em 0.1em;
     cursor: pointer;
-    font-size: 1.1em;   
-    }
+    font-size: 1.1em;
+}
 
 #menu {
     margin: 2.5%;
     margin-top: 2.8%;
     margin-bottom: 3%;
     text-align: center;
-    }
-/* pulsanti menu */ 
+}
 
-/* footer */
+/* fine pulsanti menu */ 
+
+/* inizio footer */
 
 footer {
     clear:left;
@@ -81,7 +85,6 @@ footer {
     color: wheat;
     background-color: #432F10;
     line-break: anywhere;
-
 }
 
 #info {
@@ -97,21 +100,25 @@ footer {
     width: 30%;
 }
 
-#info a {color: gray}
+#info a {
+    color: gray
+}
+
 /* fine footer */
 
 #Icona_home{
     display: none;
 }
 
-/*vedere se serve davvero*/
+/*vedere se serve davvero
 
 #contenuto {
 	width: 100%;
 	margin: 0px;
 	padding: 0px;
-    }
-    
+}
+
+*/
 /*************************************************************************************************************/
 @media screen and (max-width: 600px) {
     header h1 {
@@ -123,11 +130,6 @@ footer {
     header a {
         width: 30%;
         margin-left: 35%;
-    }
-
-    header{
-        z-index: 2;
-
     }
 
     #menu{

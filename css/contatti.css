@@ -1,18 +1,21 @@
-
 /* inizio contenuto */
+
 #contenuto {
 	width: 100%;
 	margin:0;
 	margin-top: 5%;
 	padding:0;
-	}
+}
+
 #contenuto > h3, h2 {
 	margin-top: 0.3%;
 	text-align: center;
-	}
+}
+
 /* fine contenuto */
 
-/* tabella */
+/* inizio tabella */
+
 table {
     font-family: arial, sans-serif;
 	border-collapse: collapse;
@@ -21,7 +24,7 @@ table {
 	font-size: 1.3em;
 	margin-top: 5%;
 	margin-left: 30%;
-	}
+}
 
 td, th {
     border: 1px solid #dddddd;
@@ -37,7 +40,8 @@ tr:nth-child(even) {
 tr:nth-child(odd) {
     background-color: #ffffff;
 }
-/* fine tabella*/
+
+/* fine tabella */
 
 hr {
 	margin-top: 5%;
@@ -66,9 +70,11 @@ hr:before { /* Not really supposed to work, but does */
     border-width: 0 0 3px 0;
     border-radius: 20px;
 }
+
 /************ fine parte copiata ***********/
 
 /* contenitori dei vari contatti */
+
 #h3_map{
 	margin-top: 3%;
 	margin-left: 3%;
@@ -84,31 +90,32 @@ hr:before { /* Not really supposed to work, but does */
 /* fine contenitori contatti */
 
 /* inizio mappa */
+
 #mappa {
 	max-width: 100%;
 }
 
-#map {  position: relative;
-
+#map {
+	position: relative;
 	max-width:70%;
 	margin: 3%;
-	}
+}
 
 #map > img {
 	max-width: 100%;
 	margin-left: 21%;
 	border-style: solid;
 	border-width: thin;
-
 }
+
 /* fine mappa */
 
 @media screen and (max-width: 600px) {
 
 /***********************************mi gestisce la tabella con gli orari in contatti *********************/
-#tabella{
-    margin-left: 9%;
-    }
+	#tabella{
+    	margin-left: 9%;
+	}
 
     #map {
         max-width:100%;
@@ -117,6 +124,5 @@ hr:before { /* Not really supposed to work, but does */
     #map > img {
         max-width: 100%;
         margin: 0%;
-    
     }
 }

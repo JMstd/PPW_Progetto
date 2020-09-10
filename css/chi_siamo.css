@@ -1,5 +1,5 @@
+/* inizio gestione polaroid */
 
-/* polaroid prima */
 div.polaroid {
   width: 98%;
   margin: 1%;
@@ -14,7 +14,6 @@ div.polaroid > img {
 }
 
 div.container {
-
 	width: 45%;
 	text-align: center;
 	float: right;
@@ -24,12 +23,12 @@ div.container {
 .container > p {
 	font-size: 1em;
 } 
-/* fine polaroid */
+
+/* fine gestione polaroid */
 
 @media screen and (max-width: 860px) {
 
   div.container {
-
     width: 94%;
     margin: 2%;
     text-align: center;
@@ -43,9 +42,9 @@ div.container {
 }
 
 @media screen and (min-width: 601px) and (max-width: 860px) {
-div.polaroid{
-  width: 90%;
-  margin-left: 5%;
-}
+  div.polaroid{
+    width: 90%;
+    margin-left: 5%;
+  }
 
 }

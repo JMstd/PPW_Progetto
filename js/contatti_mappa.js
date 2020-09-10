@@ -1,36 +1,43 @@
-const LOGO_ICON = "img/logo.png";
-const LOGO_HEADER = "img/logo.png";
+/*
+La funzione che gestisce la mappa ("Immagine interattiva scalabile") 
+è stata copiata dalle dispense del corso "Programmazione in JavaScript" fatte dal Prof. 
+Vincenzo Ambriola ( http://pages.di.unipi.it/ambriola/PW/radice.htm ) 
+e modificata a seconda delle esigenze.
+*/
 
-var nodoLogo_icon;
-var nodoLogo_header;
+const LOGO_ICON = "img/logo.png";
 var nodoIcona_home;
 
-//******************************************* fine parte relativa a allst.js********** */
+//****************************** fine parte relativa ad allst.js *********************** */
 const LARGHEZZZA_FOTO = 1080;
-var nodoTuttomondo; // nodomappa
+var nodoMappa;
 var nodoMessaggio;
 var nodiArea;
 var coordinateAree;
 var dimensioneFoto;
+var simboliNascosti = [
+    "Polo Fibonacci ",
+];
+
 
 function gestoreLoad() {
     try {
-        nodoIcona_home = document.getElementById("Icona_home");
+        nodoIcona_home = document.getElementById("Icona_home");   /* "Icona Home" --> sto usando uno schermo piccolo */
         nodoIcona_home.onclick = gestoreIcona_home;
-        //***************************************************************************************************** */
+
+        //****************************************** inizio gestione icona logo *************************************************** */
         var links = document.getElementsByTagName("link");
 
         if (links.length != 0) {
             for (var i = 0; i < links.length; i++) {
                 if (document.getElementsByTagName("link")[i].getAttribute("rel") == "icon") {
-                    // j.push(document.getElementsByTagName("link")[i])
-                    document.getElementsByTagName("link")[i].setAttribute("href", "img/logo.png");
+                    document.getElementsByTagName("link")[i].setAttribute("href", LOGO_ICON);
                 }
             }
         }
 
-        var logoh = document.getElementById("logo").setAttribute("src", "img/logo.png")
-        //***************************************************************************************************** */
+        var logoh = document.getElementById("logo").setAttribute("src", "img/logo.png");
+        //****************************************** fine gestione icona logo ***************************************************** */
         gestoreFooter();
         gestoreColoreMenu();
         //******************************************* fine parte relativa a allst.js********** */
@@ -80,31 +87,27 @@ function gestoreColoreMenu() {
 }
 
 function gestoreFooter() {
-    try {
-        var info = document.getElementById("info");
-        var p = document.createElement("p");
+    var info = document.getElementById("info");
 
-        var indirizzo = "Via Filippo Buonarroti 1, Pisa";
-        var tel = " +39 388 436 00924";
-        var mail_pasticceria = "maniinpasta@gmail.com";
+    var indirizzo = "Via Filippo Buonarroti 1, Pisa";
+    var tel = " +39 388 436 00924";
+    var mail_pasticceria = "maniinpasta@gmail.com";
 
-        var autore = "Jurgen Memaj";
-        var mail_autore = "j.memaj@studenti.unipi.it";
-        var matricola = "533203";
+    var autore = "Jurgen Memaj";
+    var mail_autore = "j.memaj@studenti.unipi.it";
+    var matricola = "533203";
 
-        info.innerHTML =
+    info.innerHTML =
 
-            "<p>" + indirizzo + "<br />" + tel + "<br />" + "email: " + "<a href=mailto:" + mail_pasticceria + ">" + mail_pasticceria + "</a><br /></p>" +
-            "<p>" + autore + "<br />" + "matricola: " + matricola + "<br />" + "email: " + "<a href=mailto:" + mail_autore + ">" + mail_autore + "</a><br /></p>";
-    } catch (e) {
-        alert("gestoreLoad " + e);
-    }
+        "<p>" + indirizzo + "<br />" + tel + "<br />" + "email: " + "<a href=mailto:" + mail_pasticceria + ">" + mail_pasticceria + "</a><br /></p>" +
+        "<p>" + autore + "<br />" + "matricola: " + matricola + "<br />" + "email: " + "<a href=mailto:" + mail_autore + ">" + mail_autore + "</a><br /></p>";
+
 }
 
 function gestoreMappa() {
     try {
         nodiArea = document.getElementsByTagName("area");
-        nodoTuttomondo = document.getElementById("mappa");
+        nodoMappa = document.getElementById("mappa");
         nodoMessaggio = document.getElementById("messaggio");
         coordinateAree = [];
         for (var i = 0; i < nodiArea.length; i++) {
@@ -132,10 +135,6 @@ function gestoreClickArea() {
     }
 }
 
-var simboliNascosti = [
-    "Polo Fibonacci ",
-];
-
 function scriviMessaggio(nodo, messaggio) {
     var nodoTesto = document.createTextNode(messaggio);
     nodo.replaceChild(nodoTesto, nodo.firstChild);
@@ -143,7 +142,7 @@ function scriviMessaggio(nodo, messaggio) {
 
 function gestoreResize() {
     try {
-        var attualeDimensioneFoto = nodoTuttomondo.width;
+        var attualeDimensioneFoto = nodoMappa.width;
         var ratio = attualeDimensioneFoto / dimensioneFoto;
         for (var i = 0; i < nodiArea.length; i++) {
             for (var j = 0; j < coordinateAree[i].length; j++) {
@@ -156,6 +155,7 @@ function gestoreResize() {
         alert("gestoreResize " + e);
     }
 }
+
 function gestoreCursore() {
     try {
         this.style.cursor = "pointer";

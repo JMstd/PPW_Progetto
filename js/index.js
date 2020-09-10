@@ -1,6 +1,14 @@
+/*
+La gestione della galleria è stata copiata dalle dispense del corso "Programmazione in JavaScript" fatte dal Prof. 
+Vincenzo Ambriola ( http://pages.di.unipi.it/ambriola/PW/radice.htm ) 
+e modificata a seconda delle esigenze.
+Su quella parte copiata si basa il gestoreLoad e lo stile delle altre funzioni usate nel sito
+*/
+
 const NUMERO_FOTO = 7;
 const RITARDO = 2700;
-const LINK_CATALOGO = "index catalogo 01.html";
+const LINK_CATALOGO = "catalogo.html";
+const LOGO_ICON = "img/logo.png";
 var galleria = [];
 var indiceFoto = 0;
 var automatico = true;
@@ -11,15 +19,14 @@ var nodoLinkFoto;
 
 function gestoreLoad() {
 	try {
-		gestoreIcone();
-		nodoIcona_home = document.getElementById("Icona_home");
+		nodoIcona_home = document.getElementById("Icona_home");   /* "Icona Home" --> sto usando uno schermo piccolo */
 		nodoIcona_home.onclick = gestoreIcona_home;
-		//***************************************************************************************************** */
+		//************************************** serve a gestire la galleria *************************************************** */
 		nodoAvanti = document.getElementById("avanti");
 		nodoIndietro = document.getElementById("indietro");
 		nodoFoto = document.getElementById("foto");
 		nodoLinkFoto = document.getElementById("link_foto");
-		nodoAvanti.onclick = gestoreClickAvanti; //gestoreClick (nodoAvanti.value);
+		nodoAvanti.onclick = gestoreClickAvanti;
 		nodoIndietro.onclick = gestoreClickIndietro;
 		nodoLinkFoto.onclick = function () { nodoLinkFoto.setAttribute("href", LINK_CATALOGO) };
 
@@ -28,16 +35,20 @@ function gestoreLoad() {
 			var nomeFoto = "img/slides/foto" + i + ".jpg";
 			galleria.push(nomeFoto);
 		}
+
+		gestoreIcone();
 		cambiaFoto(-1);
 		cambiaFotoInAutomatico();
 		gestoreColoreMenu();
+
 	} catch (e) {
 		alert("gestoreLoad " + e);
 	}
 }
+
 window.onload = gestoreLoad;
 
-//********	CODICE DI ALLST.JS**************************************rivedere se cambio altre cose dopo***************************************************************** */
+//*********************************************** Inizio codice di allst.js ****************************************************** */
 
 function gestoreIcona_home() {
 
@@ -76,29 +87,24 @@ function gestoreColoreMenu() {
 }
 
 function gestoreIcone() {
-	try {
-		var links = document.getElementsByTagName("link");
+	var links = document.getElementsByTagName("link");
 
-		if (links.length != 0) {
-			for (var i = 0; i < links.length; i++) {
-				if (document.getElementsByTagName("link")[i].getAttribute("rel") == "icon") {
-					// j.push(document.getElementsByTagName("link")[i])
-					document.getElementsByTagName("link")[i].setAttribute("href", "img/logo.png");
-				}
+	if (links.length != 0) {
+		for (var i = 0; i < links.length; i++) {
+			if (document.getElementsByTagName("link")[i].getAttribute("rel") == "icon") {
+				// j.push(document.getElementsByTagName("link")[i])
+				document.getElementsByTagName("link")[i].setAttribute("href", LOGO_ICON);
 			}
 		}
-
-		var logoh = document.getElementById("logo").setAttribute("src", "img/logo.png")
-		gestoreFooter();
-
-	} catch (e) {
-		alert("gestoreLoad " + e);
 	}
+
+	var logoh = document.getElementById("logo").setAttribute("src", LOGO_ICON)
+	gestoreFooter();
+
 }
 
 function gestoreFooter() {
 	var info = document.getElementById("info");
-	var p = document.createElement("p");
 
 	var indirizzo = "Via Filippo Buonarroti 1, Pisa";
 	var tel = " +39 388 436 00924";
@@ -113,12 +119,15 @@ function gestoreFooter() {
 		"<p>" + indirizzo + "<br />" + tel + "<br />" + "email: " + "<a href=mailto:" + mail_pasticceria + ">" + mail_pasticceria + "</a><br /></p>" +
 		"<p>" + autore + "<br />" + "matricola: " + matricola + "<br />" + "email: " + "<a href=mailto:" + mail_autore + ">" + mail_autore + "</a><br /></p>";
 }
-//***************************************************************************************************************** */
 
-// vengono gestiti i click sulle frecce del gestore immagini sulla home 
+//***************************************************** Fine codice di allst.js ************************************************************ */
+
+// vengono gestiti i click sulle frecce del gestore immagini sulla home
+
 function gestoreClickAvanti() {
 	try {
 		cambiaFoto(+1);
+
 	} catch (e) {
 		alert("gestoreClickAvanti " + e);
 	}
@@ -127,6 +136,7 @@ function gestoreClickAvanti() {
 function gestoreClickIndietro() {
 	try {
 		cambiaFoto(-1);
+
 	} catch (e) {
 		alert("gestoreClickIndietro " + e);
 	}
@@ -142,6 +152,7 @@ function cambiaFoto(x) {
 			indiceFoto = NUMERO_FOTO - 1;
 		}
 		nodoFoto.setAttribute("src", galleria[indiceFoto]);
+
 	} catch (e) {
 		alert("cambiaFoto " + e);
 	}

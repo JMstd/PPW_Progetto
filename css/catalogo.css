@@ -1,5 +1,4 @@
-/* inizio parte che gestisce le foto incima della galleria */
-
+/* inizio parte che gestisce le foto */
 
 div.polaroid {
   width: 36%;
@@ -22,7 +21,7 @@ div.polaroid > img {
 	max-width : 55%;  
 }
   
-/* fine parte che gestisce le foto incima della galleria */
+/* fine parte che gestisce le foto */
 
 @media screen and (max-width: 600px) {
 

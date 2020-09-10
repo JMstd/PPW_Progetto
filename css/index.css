@@ -1,24 +1,21 @@
+/* inizio div testa */
 
-a {
-	color: #000000;
-}
-
-/* div testa*/
 #testa {
 	position: relative;
 	top: 0.5em;
 	left: 8%;
 	width: 84%;
-	}
+}
+
 #galleria {
 	width: 100%;
-	}
+}
+
 #testa img {
 	max-width: 100%;
 	width: 90%;
 	margin-left: 5%;
 	cursor: pointer;
-
 }
 
 #indietro {
@@ -35,14 +32,14 @@ a {
 	top: 0px;
 	left: 0px;
 	cursor: pointer;
-	}
+}
 	
 #indietro:hover, #avanti:hover {
 	background-color: #555555;
 	color: white;
 	opacity: 0.8;
 	font-size: 500%;
-	}
+}
 
 #avanti {
 	height: 97.5%;
@@ -58,41 +55,45 @@ a {
 	top: 0px;
 	right: 0px;
 	cursor: pointer;
-	}
+}
 	
-/*fine testa */
+/* fine div testa */
 
-/*inizio parte che gestisce le notizie*/
+/* inizio parte che gestisce le notizie */
 
-  div.polaroid {
-    width: 30%;
+div.polaroid {
+	width: 30%;
     margin-left: 2.3%;
     display: inline-block;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-bottom: 25px;
     padding: 0.1em;
-  }
+}
   
-  div.polaroid:hover{
+div.polaroid:hover{
 	opacity: 0.8;
 	background-color: #8d8c8c;
-  } 
+} 
 
-  div.container {
+div.container {
     float: right;
-      width: 40%;
-	  text-align: center;
-      padding: 2%;
-  }
-  
+    width: 40%;
+	text-align: center;
+	padding: 2%;
+}
+
+div.polaroid > a {
+	color: black;
+}
+
   div.polaroid > a > img {
-      width : 55%;
-      }
+    width : 55%;
+}
 		
-  #Sottosezione {
-	  margin-left: 3%;
-  }
+#Sottosezione {
+	margin-left: 3%;
+}
 /*fine parte che gestisce le notizie*/
 
 
@@ -107,8 +108,8 @@ a {
 	}
 	
 	#indietro, #avanti {
-	margin: 0%;
-	height: 92%;
+		margin: 0%;
+		height: 92%;
 	}
 
 	div.polaroid {
