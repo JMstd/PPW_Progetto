@@ -1,0 +1,13 @@
+Le immagini sono state prese e modificate (in alcuni casi non solo nelle dimensioni) dai seguenti siti:
+
+    https://unsplash.com/s/photos/confectionery
+
+    https://pixabay.com/it/photos/panificio-cookies-dolci-cotto-1209446/
+
+    https://stocksnap.io/search/confectionery
+
+    https://www.freepik.com/search?dates=any&format=search&page=1&query=confectionery&selection=1&sort=popular&type=photo
+
+Le modifiche, sono state fatte usando "GIMP 2.10.20"
+
+Ad esclusione di Icona_home.svg che è stata creata con "Inkscape 1.0" e modificata sempre con GIMP
