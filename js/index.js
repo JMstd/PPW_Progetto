@@ -9,6 +9,9 @@ const NUMERO_FOTO = 7;
 const RITARDO = 2700;
 const LINK_CATALOGO = "catalogo.html";
 const LOGO_ICON = "img/logo.png";
+var nodoIcona_home;
+var nodoLinksMenu;
+var nodoLinks;
 var galleria = [];
 var indiceFoto = 0;
 var automatico = true;
@@ -21,6 +24,9 @@ function gestoreLoad() {
 	try {
 		nodoIcona_home = document.getElementById("Icona_home");   /* "Icona Home" --> sto usando uno schermo piccolo */
 		nodoIcona_home.onclick = gestoreIcona_home;
+		nodoLinksMenu = document.getElementById("links_menu").getElementsByTagName("a");
+		nodoLinks = document.getElementsByTagName("link");
+
 		//************************************** serve a gestire la galleria *************************************************** */
 		nodoAvanti = document.getElementById("avanti");
 		nodoIndietro = document.getElementById("indietro");
@@ -28,7 +34,7 @@ function gestoreLoad() {
 		nodoLinkFoto = document.getElementById("link_foto");
 		nodoAvanti.onclick = gestoreClickAvanti;
 		nodoIndietro.onclick = gestoreClickIndietro;
-		nodoLinkFoto.onclick = function () { nodoLinkFoto.setAttribute("href", LINK_CATALOGO) };
+		nodoLinkFoto.onclick = gestoreClickCatalogo;
 
 		// popola galleria con i nomi delle mie foto nella cartella
 		for (var i = 0; i < NUMERO_FOTO; i++) {
@@ -51,76 +57,77 @@ window.onload = gestoreLoad;
 //*********************************************** Inizio codice di allst.js ****************************************************** */
 
 function gestoreIcona_home() {
+	try {
 
-	var controllo = "";
+		var controllo = "";
 
-	var anchor = document.getElementById("menu").getElementsByTagName("a");
+		var links = nodoLinksMenu;
 
-	if (anchor[0].style.display == "block") {
-		controllo = "none";
-	} else {
-		controllo = "block";
-	}
+		if (links[0].style.display == "block") {
+			controllo = "none";
+		} else {
+			controllo = "block";
+		}
 
-	for (var i = 0; i < anchor.length; i++) {
-		anchor[i].style.display = controllo;
+		for (var i = 0; i < links.length; i++) {
+			links[i].style.display = controllo;
+		}
+
+	} catch (e) {
+		alert("gestoreLoad " + e);
 	}
 
 }
 
 function gestoreColoreMenu() {
+	try {
 
-	var href_corrente = window.location.href;
+		var href_corrente = window.location.href;
 
-	var res = href_corrente.split("/");
+		var res = href_corrente.split("/");
 
-	menu = document.getElementById("links_menu");
+		var links = nodoLinksMenu;
 
-	links = menu.getElementsByTagName("a");
-
-	for (var i = 0; i < links.length; i++) {
-		if (res[res.length - 1] == links[i].getAttribute("href")) {
-			links[i].style.backgroundColor = "#994d00";
+		for (var i = 0; i < links.length; i++) {
+			if (res[res.length - 1] == links[i].getAttribute("href")) {
+				links[i].style.backgroundColor = "#994d00";
+			}
 		}
+
+	} catch (e) {
+		alert("gestoreLoad " + e);
 	}
 
 }
 
 function gestoreIcone() {
-	var links = document.getElementsByTagName("link");
+	try {
 
-	if (links.length != 0) {
-		for (var i = 0; i < links.length; i++) {
-			if (document.getElementsByTagName("link")[i].getAttribute("rel") == "icon") {
-				// j.push(document.getElementsByTagName("link")[i])
-				document.getElementsByTagName("link")[i].setAttribute("href", LOGO_ICON);
+		if (nodoLinks.length != 0) {
+			for (var i = 0; i < nodoLinks.length; i++) {
+				if (document.getElementsByTagName("link")[i].getAttribute("rel") == "icon") {
+					document.getElementsByTagName("link")[i].setAttribute("href", LOGO_ICON);
+				}
 			}
 		}
+
+		document.getElementById("logo").setAttribute("src", LOGO_ICON)
+
+	} catch (e) {
+		alert("gestoreLoad " + e);
 	}
-
-	var logoh = document.getElementById("logo").setAttribute("src", LOGO_ICON)
-	gestoreFooter();
-
-}
-
-function gestoreFooter() {
-	var info = document.getElementById("info");
-
-	var indirizzo = "Via Filippo Buonarroti 1, Pisa";
-	var tel = " +39 388 436 00924";
-	var mail_pasticceria = "maniinpasta@gmail.com";
-
-	var autore = "Jurgen Memaj";
-	var mail_autore = "j.memaj@studenti.unipi.it";
-	var matricola = "533203";
-
-	info.innerHTML =
-
-		"<p>" + indirizzo + "<br />" + tel + "<br />" + "email: " + "<a href=mailto:" + mail_pasticceria + ">" + mail_pasticceria + "</a><br /></p>" +
-		"<p>" + autore + "<br />" + "matricola: " + matricola + "<br />" + "email: " + "<a href=mailto:" + mail_autore + ">" + mail_autore + "</a><br /></p>";
 }
 
 //***************************************************** Fine codice di allst.js ************************************************************ */
+
+function gestoreClickCatalogo() {
+	try {
+		nodoLinkFoto.setAttribute("href", LINK_CATALOGO);
+
+	} catch (e) {
+		alert("gestoreClickAvanti " + e);
+	}
+}
 
 // vengono gestiti i click sulle frecce del gestore immagini sulla home
 
@@ -159,8 +166,13 @@ function cambiaFoto(x) {
 }
 
 function cambiaFotoInAutomatico() {
-	if (automatico) {
-		cambiaFoto(+1);
-		setTimeout(cambiaFotoInAutomatico, RITARDO);
+	try {
+
+		if (automatico) {
+			cambiaFoto(+1);
+			setTimeout(cambiaFotoInAutomatico, RITARDO);
+		}
+	} catch (e) {
+		alert("cambiaFoto " + e);
 	}
 }

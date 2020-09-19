@@ -97,7 +97,7 @@ footer {
     font-size: 0.8em;
     display: inline-block;
     margin-left: 20%;
-    width: 30%;
+    width: 29%;
 }
 
 #info a {
@@ -110,15 +110,6 @@ footer {
     display: none;
 }
 
-/*vedere se serve davvero
-
-#contenuto {
-	width: 100%;
-	margin: 0px;
-	padding: 0px;
-}
-
-*/
 /*************************************************************************************************************/
 @media screen and (max-width: 600px) {
     header h1 {
@@ -170,7 +161,21 @@ footer {
     .polaroid {
         margin-top: 3%;
     }
+
+/* inizio footer */
+
+    #info {
+        width: 100%;
+    }
     
+    #info p {
+
+        margin-left: 5%;
+        width: 40%;
+    }
+
+/* fine footer */
+
 }
 
 @media screen and (min-width: 601px) and (max-width: 860px) {

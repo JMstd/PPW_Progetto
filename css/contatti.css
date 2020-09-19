@@ -89,6 +89,11 @@ hr:before { /* Not really supposed to work, but does */
 
 /* fine contenitori contatti */
 
+#note_autore{
+text-align: right;
+margin: 2%;
+}
+
 /* inizio mappa */
 
 #mappa {

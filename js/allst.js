@@ -1,26 +1,28 @@
 const LOGO_ICON = "img/logo.png";
 var nodoIcona_home;
+var nodoLinksMenu;
+var nodoLinks;
 
-function gestoreIcone() {
+function gestoreLoad() {
     try {
         nodoIcona_home = document.getElementById("Icona_home");   /* "Icona Home" --> sto usando uno schermo piccolo */
         nodoIcona_home.onclick = gestoreIcona_home;
+        nodoLinksMenu = document.getElementById("links_menu").getElementsByTagName("a");
 
         //****************************************** inizio gestione icona logo *************************************************** */
-        var links = document.getElementsByTagName("link");
+        nodoLinks = document.getElementsByTagName("link");
 
-        if (links.length != 0) {
-            for (var i = 0; i < links.length; i++) {
+        if (nodoLinks.length != 0) {
+            for (var i = 0; i < nodoLinks.length; i++) {
                 if (document.getElementsByTagName("link")[i].getAttribute("rel") == "icon") {
                     document.getElementsByTagName("link")[i].setAttribute("href", LOGO_ICON);
                 }
             }
         }
 
-        var logoh = document.getElementById("logo").setAttribute("src", "img/logo.png");
+        document.getElementById("logo").setAttribute("src", LOGO_ICON);
 
         //****************************************** fine gestione icona logo ***************************************************** */
-        gestoreFooter();
         gestoreColoreMenu();
 
     } catch (e) {
@@ -28,44 +30,21 @@ function gestoreIcone() {
     }
 }
 
-function gestoreFooter() {
-    try {
-        var info = document.getElementById("info");
-
-        var indirizzo = "Via Filippo Buonarroti 1, Pisa";
-        var tel = " +39 388 436 00924";
-        var mail_pasticceria = "maniinpasta@gmail.com";
-
-        var autore = "Jurgen Memaj";
-        var mail_autore = "j.memaj@studenti.unipi.it";
-        var matricola = "533203";
-
-        info.innerHTML =
-
-            "<p>" + indirizzo + "<br />" + tel + "<br />" + "email: " + "<a href=mailto:" + mail_pasticceria + ">" + mail_pasticceria + "</a><br /></p>" +
-            "<p>" + autore + "<br />" + "matricola: " + matricola + "<br />" + "email: " + "<a href=mailto:" + mail_autore + ">" + mail_autore + "</a><br /></p>";
-
-    } catch (e) {
-        alert("gestoreLoad " + e);
-    }
-
-}
-
 function gestoreIcona_home() {
     try {
 
         var controllo = "";
 
-        var anchor = document.getElementById("menu").getElementsByTagName("a");
+        var links = nodoLinksMenu;
 
-        if (anchor[0].style.display == "block") {
+        if (links[0].style.display == "block") {
             controllo = "none";
         } else {
             controllo = "block";
         }
 
-        for (var i = 0; i < anchor.length; i++) {
-            anchor[i].style.display = controllo;
+        for (var i = 0; i < links.length; i++) {
+            links[i].style.display = controllo;
         }
 
     } catch (e) {
@@ -81,9 +60,7 @@ function gestoreColoreMenu() {
 
         var res = href_corrente.split("/");
 
-        menu = document.getElementById("links_menu");
-
-        links = menu.getElementsByTagName("a");
+        var links = nodoLinksMenu;
 
         for (var i = 0; i < links.length; i++) {
             if (res[res.length - 1] == links[i].getAttribute("href")) {
@@ -97,4 +74,4 @@ function gestoreColoreMenu() {
 
 }
 
-window.onload = gestoreIcone;
+window.onload = gestoreLoad;
